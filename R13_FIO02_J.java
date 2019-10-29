@@ -1,7 +1,9 @@
 //rule 13
 //Input Output (FIO) example 02
-//noncompliant solution
+//compliant solution
 
 
-File file = new File(args[0]);
-file.delete();
+File file = new File("file");
+if (!file.delete()) {
+  System.out.println("Deletion failed");
+}
