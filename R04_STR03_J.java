@@ -1,10 +1,10 @@
 //rule 04
 //Characters and Strings (STR) example 03
-//noncompliant solution
+//compliant solution
 
 
 BigInteger x = new BigInteger("530500452766");
-byte[] byteArray = x.toByteArray();
-String s = new String(byteArray);
-byteArray = s.getBytes();
-x = new BigInteger(byteArray);
+String s = x.toString();  // Valid character data
+byte[] byteArray = s.getBytes();
+String ns = new String(byteArray); 
+x = new BigInteger(ns); 
