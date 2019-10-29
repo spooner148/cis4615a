@@ -1,12 +1,14 @@
 //rule 09
 //Locking (LCK) example 01
-//noncompliant solution
+//compliant solution
 
 
-private final Boolean initialized = Boolean.FALSE;
+private int count = 0;
+private final Integer Lock = new Integer(count);
  
 public void doSomething() {
-  synchronized (initialized) {
+  synchronized (Lock) {
+    count++;
     // ...
   }
 }
