@@ -1,6 +1,6 @@
 //rule 10
 //Thread APIs (THI) example 00
-//noncompliant solution
+//compliant solution
 
 
 public final class Foo implements Runnable {
@@ -10,6 +10,6 @@ public final class Foo implements Runnable {
  
   public static void main(String[] args) {
     Foo foo = new Foo();
-    new Thread(foo).run();
+    new Thread(foo).start();
   }
 }
