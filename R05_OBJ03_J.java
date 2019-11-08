@@ -8,7 +8,7 @@ compliant solution
 import java.util.ArrayList;
 import java.util.List;
   
-public class R02_XP00_J {
+public class R05_OBJ03_J {
 
 	private static void addToList(List<String> list, String str) {
 		list.add(str);     // No warning generated
