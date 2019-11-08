@@ -3,7 +3,7 @@ Rule 00
 Input Validation and Data Sanitization (IDS) example 03
 Compilation:   javac R00_IDS03_J.java
 Execution:     java R00_IDS03_J
-noncompliant solution
+compliant solution
 **********************************************************/
 import java.util.regex.Pattern;
 import java.util.logging.*;
@@ -22,11 +22,16 @@ public class R00_IDS03_J {
 		String username = in.nextLine();
 
 		if (loginSuccessful){
-			logger.severe("User login Succeeded for: " + username);
-		} else {
-			logger.severe("User login failed for: " + username);
-		}
-		
+			logger.severe("User login succeeded for: " + sanitizeUser(username));
+	  	} else {
+			logger.severe("User login failed for: " + sanitizeUser(username));
+	  	}
+
 		in.close();
 	}
+
+	public static String sanitizeUser(String username) {
+		return Pattern.matches("[A-Za-z0-9_]+", username)
+			? username : "unauthorized user";
+	  }
 }
