@@ -8,8 +8,6 @@ noncompliant solution
 import java.util.ArrayList;
 import java.util.List;
 
-//public class R05_OBJ03_J {
-  
 public class R05_OBJ03_J {
   private static void addToList(List list, Object obj) {
     list.add(obj); // Unchecked warning
