@@ -1,8 +1,10 @@
-/*rule 06
+/*****************************************
+Rule 06
 Methods (MET) example 01
-Compilation: javac R06_MET01_J.java
-Execution: jaca R06_MET01_J
-*/
+Compilation:    javac R06_MET01_J.java
+Execution: 	java R06_MET01_J
+noncompliant solution
+*****************************************/
 
 public class R06_MET01_J {
 	
